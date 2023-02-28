@@ -1,0 +1,68 @@
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    max-height: 100vh;
+}
+
+header {
+    flex-shrink: 0;
+    height: 30px;
+    background: gold;
+}
+main {
+    height: calc(100vh - 60px);
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+}
+footer {
+    height: 30px;
+    background: gold;
+}
+
+article {
+    _min-height: 1200px;
+    height: calc(100vh - 60px);
+    overflow: scroll;
+    position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+article h1,
+article h2 {
+    position: sticky;
+    top: 60px;
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: white;
+    text-align: center;
+}
+.wave {
+    height: 60px;
+    width: 100%;
+}
+
+.wave.top {
+    background: darkblue;
+    position: sticky;
+    top: 0;
+}
+
+.wave.bottom {
+    background: darkred;
+    position: sticky;
+    bottom: 0;
+}
+
+p {
+    width: 150px;
+    padding: 1rem;
+}
